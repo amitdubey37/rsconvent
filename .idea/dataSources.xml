@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="944750016">
+    <data-source source="LOCAL" name="H2 - mem:devDb" uuid="d94088bf-c848-48b3-9515-d1439e90131d">
+      <driver-ref>h2.embedded</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.h2.Driver</jdbc-driver>
+      <jdbc-url>jdbc:h2:mem:devDb</jdbc-url>
+      <libraries />
+    </data-source>
+  </component>
+</project>
