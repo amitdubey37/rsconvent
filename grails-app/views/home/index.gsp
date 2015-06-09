@@ -182,7 +182,7 @@
         <p>For admission details and any other enquiry feel free to get in touch</p>
       </div>
       <div class="col-md-4">
-        <g:link url="${resource(dir: 'home',file: 'contact.gsp')}" class="btn btn-lg btn-default btn-block"  >
+        <g:link controller="home" action="showContactPage" class="btn btn-lg btn-default btn-block"  >
 
           Contact Now
         </g:link>
