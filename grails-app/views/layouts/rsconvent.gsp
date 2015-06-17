@@ -181,11 +181,12 @@
 
 </body>
 <footer>
-  <div class="row">
-    <div class="col-lg-12" style="margin-left: 8%;">
-      <p>Copyright &copy; Amit Dubey</p>
-    </div>
+
+    <div class="col-md-12">
+      <div class="row">
+    <p style="text-align: center;">Copyright &copy; Amit Dubey</p>
   </div>
+</div>
 </footer>
 <script>
   $('.carousel').carousel({
