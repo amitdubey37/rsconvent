@@ -23,7 +23,7 @@
   <script src="${resource(dir: 'js',file: 'jquery.js')}"></script>
   <!-- Contact Form JavaScript -->
   <!-- Do not edit these files! In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
-  <script src="${resource(dir: 'js',file: 'jqBootstrapValidation.js')}"></script>
+  <%--<script src="${resource(dir: 'js',file: 'jqBootstrapValidation.js')}"></script>--%>
   <script src="${resource(dir: 'js',file: 'contact_me.js')}"></script>
 
 
@@ -91,9 +91,19 @@
         <li>
           <a href="about.html">About</a>
         </li>
-        <li>
-          <a href="services.html">Vice Chancellor</a>
-        </li>
+        <%-- Displaying link to user dashboard --%>
+        <g:if test="${session.user!=null}">
+          <g:if test="${session.user.userGroup==com.rsconvent.enums.Group.ADMIN}">
+          <li>
+            <g:link controller="admin" action="index">Admin</g:link>
+          </li>
+          </g:if>
+          <g:else>
+            <li>
+              <g:link controller="home" action="userHome">${session.user.username}</g:link>
+            </li>
+          </g:else>
+        </g:if>
         <li>
           <a href="contact.html">Contact</a>
         </li>
@@ -151,6 +161,12 @@
             </li>
           </ul>
         </li>
+        <g:if test="${session.user!=null}">
+          <li><g:link controller="home" action="logout">Logout</g:link></li>
+        </g:if>
+        <g:else>
+          <li><g:link controller="user" action="index">Login</g:link></li>
+        </g:else>
       </ul>
     </div>
     <!-- /.navbar-collapse -->
