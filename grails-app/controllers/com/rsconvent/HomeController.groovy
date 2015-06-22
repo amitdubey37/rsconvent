@@ -28,4 +28,10 @@ class HomeController {
             redirect(action: 'login')
         }
     }
+    def logout()
+    {
+        session.invalidate()
+        flash.message="Succesfully Logged Out"
+        redirect(action: 'login')
+    }
 }

@@ -1,7 +1,7 @@
 package com.rsconvent
 
 class Division {
-    static hasMany = [students : Student, teachers : Teacher]
+    static hasMany = [users : User]
     int maxStudents
     int currentStudents
     String name

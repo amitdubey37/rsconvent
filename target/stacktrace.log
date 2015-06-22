@@ -6090,3 +6090,107 @@ grails.validation.ValidationException: Validation Error(s) occurred during save(
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 	at java.lang.Thread.run(Thread.java:745)
+2015-06-22 17:19:31,420 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+grails.validation.ValidationException: Validation Error(s) occurred during save():
+- Field error in object 'com.rsconvent.Admin' on field 'userGroup': rejected value [null]; codes [com.rsconvent.Admin.userGroup.nullable.error.com.rsconvent.Admin.userGroup,com.rsconvent.Admin.userGroup.nullable.error.userGroup,com.rsconvent.Admin.userGroup.nullable.error.com.rsconvent.enums.Group,com.rsconvent.Admin.userGroup.nullable.error,admin.userGroup.nullable.error.com.rsconvent.Admin.userGroup,admin.userGroup.nullable.error.userGroup,admin.userGroup.nullable.error.com.rsconvent.enums.Group,admin.userGroup.nullable.error,com.rsconvent.Admin.userGroup.nullable.com.rsconvent.Admin.userGroup,com.rsconvent.Admin.userGroup.nullable.userGroup,com.rsconvent.Admin.userGroup.nullable.com.rsconvent.enums.Group,com.rsconvent.Admin.userGroup.nullable,admin.userGroup.nullable.com.rsconvent.Admin.userGroup,admin.userGroup.nullable.userGroup,admin.userGroup.nullable.com.rsconvent.enums.Group,admin.userGroup.nullable,nullable.com.rsconvent.Admin.userGroup,nullable.userGroup,nullable.com.rsconvent.enums.Group,nullable]; arguments [userGroup,class com.rsconvent.Admin]; default message [Property [{0}] of class [{1}] cannot be null]
+
+	at org.codehaus.groovy.grails.orm.hibernate.metaclass.AbstractSavePersistentMethod.doInvokeInternal(AbstractSavePersistentMethod.java:190)
+	at org.codehaus.groovy.grails.orm.hibernate.metaclass.AbstractDynamicPersistentMethod.invoke(AbstractDynamicPersistentMethod.java:68)
+	at org.codehaus.groovy.grails.orm.hibernate.HibernateGormInstanceApi.save(HibernateGormInstanceApi.groovy:195)
+	at com.rsconvent.Admin.save(Admin.groovy)
+	at com.rsconvent.Admin$save$0.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:116)
+	at BootStrap$_closure1.doCall(BootStrap.groovy:8)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1270)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:324)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1207)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1110)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1016)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1081)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1110)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1016)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at groovy.lang.Closure.call(Closure.java:417)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:327)
+	at grails.util.Environment.executeForEnvironment(Environment.java:320)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:296)
+	at org.codehaus.groovy.grails.commons.DefaultGrailsBootstrapClass.callInit(DefaultGrailsBootstrapClass.java:60)
+	at org.codehaus.groovy.grails.web.context.GrailsConfigUtils.executeGrailsBootstraps(GrailsConfigUtils.java:78)
+	at org.codehaus.groovy.grails.web.context.GrailsContextLoaderListener.initWebApplicationContext(GrailsContextLoaderListener.java:110)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4992)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5490)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1575)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1565)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+2015-06-22 17:19:31,422 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+grails.validation.ValidationException: Validation Error(s) occurred during save():
+- Field error in object 'com.rsconvent.Admin' on field 'userGroup': rejected value [null]; codes [com.rsconvent.Admin.userGroup.nullable.error.com.rsconvent.Admin.userGroup,com.rsconvent.Admin.userGroup.nullable.error.userGroup,com.rsconvent.Admin.userGroup.nullable.error.com.rsconvent.enums.Group,com.rsconvent.Admin.userGroup.nullable.error,admin.userGroup.nullable.error.com.rsconvent.Admin.userGroup,admin.userGroup.nullable.error.userGroup,admin.userGroup.nullable.error.com.rsconvent.enums.Group,admin.userGroup.nullable.error,com.rsconvent.Admin.userGroup.nullable.com.rsconvent.Admin.userGroup,com.rsconvent.Admin.userGroup.nullable.userGroup,com.rsconvent.Admin.userGroup.nullable.com.rsconvent.enums.Group,com.rsconvent.Admin.userGroup.nullable,admin.userGroup.nullable.com.rsconvent.Admin.userGroup,admin.userGroup.nullable.userGroup,admin.userGroup.nullable.com.rsconvent.enums.Group,admin.userGroup.nullable,nullable.com.rsconvent.Admin.userGroup,nullable.userGroup,nullable.com.rsconvent.enums.Group,nullable]; arguments [userGroup,class com.rsconvent.Admin]; default message [Property [{0}] of class [{1}] cannot be null]
+
+	at BootStrap$_closure1.doCall(BootStrap.groovy:8)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:327)
+	at grails.util.Environment.executeForEnvironment(Environment.java:320)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:296)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+2015-06-22 17:19:31,422 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+grails.validation.ValidationException: Validation Error(s) occurred during save():
+- Field error in object 'com.rsconvent.Admin' on field 'userGroup': rejected value [null]; codes [com.rsconvent.Admin.userGroup.nullable.error.com.rsconvent.Admin.userGroup,com.rsconvent.Admin.userGroup.nullable.error.userGroup,com.rsconvent.Admin.userGroup.nullable.error.com.rsconvent.enums.Group,com.rsconvent.Admin.userGroup.nullable.error,admin.userGroup.nullable.error.com.rsconvent.Admin.userGroup,admin.userGroup.nullable.error.userGroup,admin.userGroup.nullable.error.com.rsconvent.enums.Group,admin.userGroup.nullable.error,com.rsconvent.Admin.userGroup.nullable.com.rsconvent.Admin.userGroup,com.rsconvent.Admin.userGroup.nullable.userGroup,com.rsconvent.Admin.userGroup.nullable.com.rsconvent.enums.Group,com.rsconvent.Admin.userGroup.nullable,admin.userGroup.nullable.com.rsconvent.Admin.userGroup,admin.userGroup.nullable.userGroup,admin.userGroup.nullable.com.rsconvent.enums.Group,admin.userGroup.nullable,nullable.com.rsconvent.Admin.userGroup,nullable.userGroup,nullable.com.rsconvent.enums.Group,nullable]; arguments [userGroup,class com.rsconvent.Admin]; default message [Property [{0}] of class [{1}] cannot be null]
+
+	at BootStrap$_closure1.doCall(BootStrap.groovy:8)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:327)
+	at grails.util.Environment.executeForEnvironment(Environment.java:320)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:296)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+2015-06-22 17:19:31,423 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+grails.validation.ValidationException: Validation Error(s) occurred during save():
+- Field error in object 'com.rsconvent.Admin' on field 'userGroup': rejected value [null]; codes [com.rsconvent.Admin.userGroup.nullable.error.com.rsconvent.Admin.userGroup,com.rsconvent.Admin.userGroup.nullable.error.userGroup,com.rsconvent.Admin.userGroup.nullable.error.com.rsconvent.enums.Group,com.rsconvent.Admin.userGroup.nullable.error,admin.userGroup.nullable.error.com.rsconvent.Admin.userGroup,admin.userGroup.nullable.error.userGroup,admin.userGroup.nullable.error.com.rsconvent.enums.Group,admin.userGroup.nullable.error,com.rsconvent.Admin.userGroup.nullable.com.rsconvent.Admin.userGroup,com.rsconvent.Admin.userGroup.nullable.userGroup,com.rsconvent.Admin.userGroup.nullable.com.rsconvent.enums.Group,com.rsconvent.Admin.userGroup.nullable,admin.userGroup.nullable.com.rsconvent.Admin.userGroup,admin.userGroup.nullable.userGroup,admin.userGroup.nullable.com.rsconvent.enums.Group,admin.userGroup.nullable,nullable.com.rsconvent.Admin.userGroup,nullable.userGroup,nullable.com.rsconvent.enums.Group,nullable]; arguments [userGroup,class com.rsconvent.Admin]; default message [Property [{0}] of class [{1}] cannot be null]
+
+	at BootStrap$_closure1.doCall(BootStrap.groovy:8)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:327)
+	at grails.util.Environment.executeForEnvironment(Environment.java:320)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:296)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+2015-06-22 17:19:31,423 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+grails.validation.ValidationException: Validation Error(s) occurred during save():
+- Field error in object 'com.rsconvent.Admin' on field 'userGroup': rejected value [null]; codes [com.rsconvent.Admin.userGroup.nullable.error.com.rsconvent.Admin.userGroup,com.rsconvent.Admin.userGroup.nullable.error.userGroup,com.rsconvent.Admin.userGroup.nullable.error.com.rsconvent.enums.Group,com.rsconvent.Admin.userGroup.nullable.error,admin.userGroup.nullable.error.com.rsconvent.Admin.userGroup,admin.userGroup.nullable.error.userGroup,admin.userGroup.nullable.error.com.rsconvent.enums.Group,admin.userGroup.nullable.error,com.rsconvent.Admin.userGroup.nullable.com.rsconvent.Admin.userGroup,com.rsconvent.Admin.userGroup.nullable.userGroup,com.rsconvent.Admin.userGroup.nullable.com.rsconvent.enums.Group,com.rsconvent.Admin.userGroup.nullable,admin.userGroup.nullable.com.rsconvent.Admin.userGroup,admin.userGroup.nullable.userGroup,admin.userGroup.nullable.com.rsconvent.enums.Group,admin.userGroup.nullable,nullable.com.rsconvent.Admin.userGroup,nullable.userGroup,nullable.com.rsconvent.enums.Group,nullable]; arguments [userGroup,class com.rsconvent.Admin]; default message [Property [{0}] of class [{1}] cannot be null]
+
+	at BootStrap$_closure1.doCall(BootStrap.groovy:8)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:327)
+	at grails.util.Environment.executeForEnvironment(Environment.java:320)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:296)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+2015-06-22 17:19:31,423 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+grails.validation.ValidationException: Validation Error(s) occurred during save():
+- Field error in object 'com.rsconvent.Admin' on field 'userGroup': rejected value [null]; codes [com.rsconvent.Admin.userGroup.nullable.error.com.rsconvent.Admin.userGroup,com.rsconvent.Admin.userGroup.nullable.error.userGroup,com.rsconvent.Admin.userGroup.nullable.error.com.rsconvent.enums.Group,com.rsconvent.Admin.userGroup.nullable.error,admin.userGroup.nullable.error.com.rsconvent.Admin.userGroup,admin.userGroup.nullable.error.userGroup,admin.userGroup.nullable.error.com.rsconvent.enums.Group,admin.userGroup.nullable.error,com.rsconvent.Admin.userGroup.nullable.com.rsconvent.Admin.userGroup,com.rsconvent.Admin.userGroup.nullable.userGroup,com.rsconvent.Admin.userGroup.nullable.com.rsconvent.enums.Group,com.rsconvent.Admin.userGroup.nullable,admin.userGroup.nullable.com.rsconvent.Admin.userGroup,admin.userGroup.nullable.userGroup,admin.userGroup.nullable.com.rsconvent.enums.Group,admin.userGroup.nullable,nullable.com.rsconvent.Admin.userGroup,nullable.userGroup,nullable.com.rsconvent.enums.Group,nullable]; arguments [userGroup,class com.rsconvent.Admin]; default message [Property [{0}] of class [{1}] cannot be null]
+
+	at BootStrap$_closure1.doCall(BootStrap.groovy:8)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:327)
+	at grails.util.Environment.executeForEnvironment(Environment.java:320)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:296)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)

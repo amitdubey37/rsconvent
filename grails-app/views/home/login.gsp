@@ -17,21 +17,24 @@
 <g:if test="${flash.message}">
     <script>
         $('document').ready(function(){
-            $('#myMadal1').modal('show')
+            $('#myModal1').modal('active')
         })
     </script>
 </g:if>
 <div class="container">
     <div class="row">
-        <div class="col-md-4">
+        <p></p>
+    </div>
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h4><i class="fa fa-fw fa-gift"></i> Login</h4>
+                    <h4><i class="fa fa-fw fa-lock"></i> Login</h4>
                 </div>
                 <div class="panel-body">
                     <g:form action="auth">
-                        <input type="text" name="username" placeholder="User Name"/><br>
-                        <input type="password" name="password" placeholder="Password"/><br><br>
+                        <input class="form-control" type="text" name="username" placeholder="User Name"/><br>
+                        <input class="form-control" type="password" name="password" placeholder="Password"/><br><br>
                         <input class="btn btn-primary" type="submit" value="Login"/>
                     </g:form>
                 </div>

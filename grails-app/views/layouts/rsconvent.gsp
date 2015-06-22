@@ -151,6 +151,11 @@
             </li>
           </ul>
         </li>
+        <g:if test="${session.user}">
+          <li>
+            <g:link controller="home" action="logout">Logout</g:link>
+          </li>
+        </g:if>
       </ul>
     </div>
     <!-- /.navbar-collapse -->
