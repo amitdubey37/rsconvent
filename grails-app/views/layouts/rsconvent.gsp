@@ -23,7 +23,7 @@
   <script src="${resource(dir: 'js',file: 'jquery.js')}"></script>
   <!-- Contact Form JavaScript -->
   <!-- Do not edit these files! In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
-  <script src="${resource(dir: 'js',file: 'jqBootstrapValidation.js')}"></script>
+  <%--<script src="${resource(dir: 'js',file: 'jqBootstrapValidation.js')}"></script>--%>
   <script src="${resource(dir: 'js',file: 'contact_me.js')}"></script>
 
 

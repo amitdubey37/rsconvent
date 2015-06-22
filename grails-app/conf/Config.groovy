@@ -40,7 +40,20 @@ grails.views.default.codec = "html"
 // The default scope for controllers. May be prototype, session or singleton.
 // If unspecified, controllers are prototype scoped.
 grails.controllers.defaultScope = 'singleton'
+//mail
+grails {
+    //mail config
+    mail {
+        host = "smtp.gmail.com"
+        port = 465
+        username = "rsconvent123@gmail.com"
+        password = "ashaj1992"
+        props = ["mail.smtp.auth":"true",
+                 "mail.smtp.socketFactory.port":"465",
+                 "mail.smtp.socketFactory.class":"javax.net.ssl.SSLSocketFactory",
+                 "mail.smtp.socketFactory.fallback":"false"]   }
 
+}
 // GSP settings
 grails {
     views {

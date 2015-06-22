@@ -1,12 +1,12 @@
-import com.rsconvent.User
+import com.rsconvent.Admin
 import com.rsconvent.enums.Group
 
 class BootStrap {
 
     def init = { servletContext ->
-       /* if(User.list().size()<1){
-            new User(firstName: 'amit',lastName: 'dubey',address: 'New Delhi', group: Group.ADMIN,email: 'dubeyamitdubey@gmail.com',phone: '9654385171', username: '123456',password: '12345678').save(flush: true,failOnError: true)
-        }*/
+        if(Admin.list().size()<1){
+            new Admin(firstName: 'amit',lastName: 'dubey',address: 'New Delhi', group: Group.ADMIN,email: 'digitron064@gmail.com',phone: 9654385171, username: '123456',password: '12345678', pic_path: "home/varun/rsconvent/web-app/images/index.jpg",isActive: 'Active',gender: 'male').save(flush: true,failOnError: true)
+        }
     }
     def destroy = {
     }
