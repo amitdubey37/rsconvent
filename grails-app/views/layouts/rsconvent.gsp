@@ -83,11 +83,21 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">IP University</a>
+      <g:link class="navbar-brand" controller="home" action="index">IP University</g:link>
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
+        <g:if test="${session.user}">
+          <li>
+            <g:if test="${session.user.userGroup== com.rsconvent.enums.Group.ADMIN}">
+              <g:link controller="admin" action="index"><i class="fa fa-fw fa-user"></i>Dashboard</g:link>
+            </g:if>
+            <g:else>
+              <g:link controller="user" action="index"><i class="fa fa-fw fa-user"></i>Dashboard</g:link>
+            </g:else>
+          </li>
+        </g:if>
         <li>
           <a href="about.html">About</a>
         </li>
@@ -153,7 +163,12 @@
         </li>
         <g:if test="${session.user}">
           <li>
-            <g:link controller="home" action="logout">Logout</g:link>
+            <g:link controller="home" action="logout"><i class="fa fa-fw fa-lock"></i>Logout</g:link>
+          </li>
+        </g:if>
+        <g:if test="${!session.user}">
+          <li>
+            <g:link controller="home" action="login"><i class="fa fa-fw fa-key"></i>Login</g:link>
           </li>
         </g:if>
       </ul>
@@ -166,10 +181,12 @@
 
 </body>
 <footer>
+  <div class="container">
   <div class="row">
-    <div class="col-lg-12" style="margin-left: 8%;">
+    <div class="col-lg-12">
       <p>Copyright &copy; Amit Dubey</p>
     </div>
+  </div>
   </div>
 </footer>
 <script>

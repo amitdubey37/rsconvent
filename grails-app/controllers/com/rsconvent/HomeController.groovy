@@ -1,5 +1,7 @@
 package com.rsconvent
 
+import com.rsconvent.enums.Group
+
 class HomeController {
 
     def index() { }
@@ -14,7 +16,10 @@ class HomeController {
             if(user.isActive)
             {
                 session.user=user
-                redirect(action: 'index')
+                if(user.userGroup==Group.ADMIN)
+                    redirect(controller: 'admin',action: 'index')
+                else
+                    redirect(controller: 'user',action: 'index')
             }
             else
             {

@@ -16,14 +16,12 @@
 <g:render template="error" model='[msg : "${flash.message}"]'/>
 <g:if test="${flash.message}">
     <script>
-        $('document').ready(function(){
-            $('#myModal1').modal('active')
-        })
+        $('#myModal1').modal('show')
     </script>
 </g:if>
 <div class="container">
     <div class="row">
-        <p></p>
+        <p></p><br><br>
     </div>
     <div class="row">
         <div class="col-md-4 col-md-offset-4">
