@@ -64,7 +64,7 @@
                         <div class="panel-heading"><h4>Add</h4></div>
                         <div class="panel-body">
                             <div class="list-group">
-                                <span class="list-group-item"><g:link><i class="fa fa-fw fa-plus"></i>Class</g:link></span>
+                                <span class="list-group-item"><g:link controller="admin" action="addClass"><i class="fa fa-fw fa-plus"></i>Class</g:link></span>
                                 <span class="list-group-item">Mukul</span>
                                 <span class="list-group-item">Varun</span>
                                 <p></p>

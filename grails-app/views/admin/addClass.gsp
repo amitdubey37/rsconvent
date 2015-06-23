@@ -13,28 +13,37 @@
 </head>
 
 <body>
+<g:render template="message" model='[msg : "${flash.message}"]'/>
+<g:if test="${flash.message}">
+    <script>
+        $('#myModal1').modal('show')
+    </script>
+</g:if>
 <div class="container">
     <div class="row">
         <div class="col-md-8">
             <h3>Enter Class Details</h3>
-            <g:form action="sender">
+            <g:form action="updateClass">
                 <div class="control-group form-group">
                     <div class="controls">
-                        <label>User Group:</label>
-                        <select type="text" class="form-control" name="userGroup">
-                            <option value="All">All</option>
-                            <option value="Student">Student</option>
-                            <option value="Teacher">Teacher</option>
-                            <option value="Guardian">Guardian</option>
-                        </select>
+                        <label>Class</label>
+                        <input type="text" name="name" class="form-control" id="class"/>
                     </div>
                 </div>
                 <div class="control-group form-group">
                     <div class="controls">
-                        <label>Message:</label>
-                        <textarea name="Message" rows="10" cols="100" class="form-control" id="message" maxlength="999" style="resize:none"></textarea>
-                    </div><br>
-                <button type="submit" class="btn btn-primary">Send</button>
+                        <label>Section</label>
+                        <input type="text" name="section" class="form-control" id="section"/>
+                    </div>
+                </div>
+                <div class="control-group form-group">
+                    <div class="controls">
+                        <label>Maximum Students</label>
+                        <input type="number" name="maxStudent" class="form-control" id="maxStudent"/>
+                    </div>
+                </div>
+                <br>
+                <input class="btn btn-primary" type="submit" value="Add Class"/>
             </g:form>
         </div>
 

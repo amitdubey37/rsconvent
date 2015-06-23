@@ -7,5 +7,11 @@
       <schema-pattern>DEVDB.PUBLIC</schema-pattern>
       <default-schemas>DEVDB.PUBLIC</default-schemas>
     </data-source>
+    <data-source name="rsconvent dev" uuid="285d1806-ed83-4fc9-bfab-71621e098705">
+      <user-name>root</user-name>
+      <user-password>dfdbdfdddfcfdfd8dfdedfd3df9bdf98df99df9edf9f</user-password>
+      <schema-pattern>rsconvent.*</schema-pattern>
+      <default-schemas>rsconvent.*</default-schemas>
+    </data-source>
   </component>
 </project>

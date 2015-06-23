@@ -12,4 +12,5 @@ class Division {
         classTeacher(nullable: true)
         topPerformer(nullable: true)
     }
+
 }

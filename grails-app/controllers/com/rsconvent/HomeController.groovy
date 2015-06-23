@@ -39,4 +39,12 @@ class HomeController {
         flash.message="Succesfully Logged Out"
         redirect(action: 'login')
     }
+    def dispPic(){
+        User user = User.get(params.long('id'))
+        def img = new File(user.pic_path).bytes
+        response.contentLength = img.length
+        response.contentType = "image/jpeg"
+        response.outputStream<<img
+        response.outputStream.flush()
+    }
 }
