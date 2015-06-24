@@ -28,4 +28,5 @@ abstract class User {
         isActive(nullable: true)
         phone(size: 10)
     }
+
 }

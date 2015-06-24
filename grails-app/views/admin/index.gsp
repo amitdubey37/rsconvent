@@ -14,6 +14,14 @@
 </head>
 
 <body>
+
+<g:render template="picEdit" model='[msg : session.user ]'/>
+<g:render template="message" model='[msg : "${flash.message}"]'/>
+<g:if test="${flash.message}">
+    <script>
+        $('#myModal1').modal('show')
+    </script>
+</g:if>
 <!-- /Header -->
 
 <!-- Main -->
@@ -31,13 +39,14 @@
             <div class="pic">
                 <a href="#"><img width="75%" src="${createLink(controller: 'home',action: 'dispPic',id: session.user.id)}"></a>
                 <div class="text">
-                    <h5><i class="glyphicon glyphicon-pencil"></i> Change image</h5>
+                    <a  name= "${session.user.id}" data-toggle="modal" data-target="#picEdit"><h5><i class="glyphicon glyphicon-pencil"></i> Change image</h5></a>
                 </div></div>
             <h5 class="centered">User Name</h5>
             <h3><i class="glyphicon glyphicon-briefcase"></i> Toolbox</h3>
             <hr>
 
             <ul class="nav nav-stacked">
+                <li><g:link controller="admin" action="viewClasses"><i class="fa fa-fw fa-plus"></i>Class</g:link></li>
                 <li><g:link action="announce"><i class="glyphicon glyphicon-flash"></i> Announce</g:link></li>
                 <!--<li><a data-toggle="modal" href="#myModal"><i class="glyphicon glyphicon-link"></i> Links</a></li>-->
                 <li><a data-toggle="modal" href="#myModal"><i class="glyphicon glyphicon-list-alt"></i> Results</a></li>
