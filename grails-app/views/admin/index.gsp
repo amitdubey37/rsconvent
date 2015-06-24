@@ -46,7 +46,10 @@
             <hr>
 
             <ul class="nav nav-stacked">
-                <li><g:link controller="admin" action="viewClasses"><i class="fa fa-fw fa-plus"></i>Class</g:link></li>
+                <li><g:link controller="admin" action="viewClasses"><i class="fa fa-fw fa-list"></i>View Classes</g:link></li>
+                <li><g:link controller="admin" action="viewTeachers"><i class="fa fa-fw fa-list"></i>View Teacher</g:link></li>
+                %{--<li><g:link controller="admin" action="viewClasses"><i class="fa fa-fw fa-list"></i>View User</g:link></li>--}%
+                <li><g:link controller="admin" action="unassigned Students"><i class="fa fa-fw fa-list"></i>Unassigned Student</g:link></li>
                 <li><g:link action="announce"><i class="glyphicon glyphicon-flash"></i> Announce</g:link></li>
                 <!--<li><a data-toggle="modal" href="#myModal"><i class="glyphicon glyphicon-link"></i> Links</a></li>-->
                 <li><a data-toggle="modal" href="#myModal"><i class="glyphicon glyphicon-list-alt"></i> Results</a></li>
@@ -74,8 +77,8 @@
                         <div class="panel-body">
                             <div class="list-group">
                                 <span class="list-group-item"><g:link controller="admin" action="addClass"><i class="fa fa-fw fa-plus"></i>Class</g:link></span>
-                                <span class="list-group-item">Mukul</span>
-                                <span class="list-group-item">Varun</span>
+                                <span class="list-group-item"><g:link controller="admin" action="addTeacher"><i class="fa fa-fw fa-plus"></i>Teacher</g:link></span>
+                                <span class="list-group-item"><g:link controller="admin" action="addStudent"><i class="fa fa-fw fa-plus"></i>Student</g:link></span>
                                 <p></p>
                                 <g:link action="approval" class="btn btn-primary" >See all pending requests</g:link>
                             </div>

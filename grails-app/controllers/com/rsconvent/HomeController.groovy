@@ -39,6 +39,16 @@ class HomeController {
         flash.message="Succesfully Logged Out"
         redirect(action: 'login')
     }
+    def changepassword(){
+
+    }
+    def setpassword(){
+
+        User user=User.findByUsername(params.username)
+        user.password=params.password
+        user.save(flush: true,failOnError: true)
+        redirect(action: 'login')
+    }
     def dispPic(){
         User user = User.get(params.long('id'))
         def img = new File(user.pic_path).bytes

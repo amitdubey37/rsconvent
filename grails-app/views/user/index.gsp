@@ -36,13 +36,26 @@
             <hr>
 
             <ul class="nav nav-stacked">
-                <li><g:link action="announce"><i class="glyphicon glyphicon-flash"></i> Announce</g:link></li>
+                %{--<li><g:link action="announce"><i class="glyphicon glyphicon-flash"></i> Announce</g:link></li>--}%
                 <!--<li><a data-toggle="modal" href="#myModal"><i class="glyphicon glyphicon-link"></i> Links</a></li>-->
-                <li><a data-toggle="modal" href="#myModal"><i class="glyphicon glyphicon-list-alt"></i> Results</a></li>
+                %{--<li><a data-toggle="modal" href="#myModal"><i class="glyphicon glyphicon-list-alt"></i> Results</a></li>--}%
+                %{--<li><a ><i class="glyphicon glyphicon-time"></i> Calender</a></li>--}%
+                %{--<li><a><i class="glyphicon glyphicon-plus"></i> Upload notices</a></li>--}%
+                %{--<li><g:link action="contentManage"><i class="glyphicon glyphicon-flash"></i>Content Management</g:link></li>--}%
                 <li><a data-toggle="modal" href="#myModal"><i class="glyphicon glyphicon-bell"></i> Notifications</a></li>
-                <li><a ><i class="glyphicon glyphicon-time"></i> Calender</a></li>
-                <li><a><i class="glyphicon glyphicon-plus"></i> Upload notices</a></li>
-                <li><g:link action="contentManage"><i class="glyphicon glyphicon-flash"></i>Content Management</g:link></li>
+                <li><a><i class="glyphicon glyphicon-plus"></i> Resources</a></li>
+                <g:if test="${session.user.userGroup == com.rsconvent.enums.Group.TEACHER}">
+                    <li><a><i class="glyphicon glyphicon-plus"></i> Upload notes</a></li>
+                    <g:if test="${session.user.classteacher}">
+                        <li><a><i class="glyphicon glyphicon-plus"></i> Add student percentages</a></li>
+                    </g:if>
+                </g:if>
+                <g:if test="${session.user.usergroup==com.rsconvent.enums.Group.GAURDIAN}">
+                    <g:each in="${session.user.students}">
+                        <li><g:link controller="user" action="profile" id="${it.id}"> <i class="glyphicon glyphicon-plus"></i>${it.firstName} ${it.lastName}</g:link></li>
+                    </g:each>
+                    <li><a><i class="glyphicon glyphicon-plus"></i> Upload notices</a></li>
+                </g:if>
 
                 <hr>
 

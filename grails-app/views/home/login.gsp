@@ -35,6 +35,7 @@
                         <input class="form-control" type="password" name="password" placeholder="Password"/><br><br>
                         <input class="btn btn-primary" type="submit" value="Login"/>
                     </g:form>
+                    <g:link controller="home" action="changepassword">Forget password</g:link>
                 </div>
             </div>
         </div>
