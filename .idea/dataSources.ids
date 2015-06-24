@@ -24,15 +24,28 @@
       <column name="section" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
       <column name="top_performer_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
       <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="FK_8mpsjmjnbx3qyg5xvdaihjpbw" columns="top_performer_id" ref-table="user" ref-schema="" ref-catalog="rsconvent" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="FK_o2ad7pk7o7fhn0ejfou6ocwo8" columns="class_teacher_id" ref-table="user" ref-schema="" ref-catalog="rsconvent" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="FK_2rme8uw67jyq1yq0aqn9opbsj" table="division_class_teacher" schema="" catalog="rsconvent" columns="class_teacher_id"/>
+      <exported-key name="FK_kc2h25mocrvoujpx72ccwj3b4" table="division_user" schema="" catalog="rsconvent" columns="division_users_id"/>
       <index name="UK_8mpsjmjnbx3qyg5xvdaihjpbw" unique="true" columns="top_performer_id"/>
+      <index name="FK_o2ad7pk7o7fhn0ejfou6ocwo8" unique="false" columns="class_teacher_id"/>
     </table>
     <table name="division_class_teacher" schema="" catalog="rsconvent" type="TABLE">
       <column name="teacher_id" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
       <column name="class_teacher_id" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <foreign-key name="FK_2tfd83rhiy9lkapchsxw5vc41" columns="teacher_id" ref-table="user" ref-schema="" ref-catalog="rsconvent" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="FK_2rme8uw67jyq1yq0aqn9opbsj" columns="class_teacher_id" ref-table="division" ref-schema="" ref-catalog="rsconvent" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="FK_2rme8uw67jyq1yq0aqn9opbsj" unique="false" columns="class_teacher_id"/>
+      <index name="FK_2tfd83rhiy9lkapchsxw5vc41" unique="false" columns="teacher_id"/>
     </table>
     <table name="division_user" schema="" catalog="rsconvent" type="TABLE">
       <column name="division_users_id" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
       <column name="user_id" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <foreign-key name="FK_kc2h25mocrvoujpx72ccwj3b4" columns="division_users_id" ref-table="division" ref-schema="" ref-catalog="rsconvent" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="FK_y14897gj7r3ya4iuono0eial" columns="user_id" ref-table="user" ref-schema="" ref-catalog="rsconvent" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="FK_kc2h25mocrvoujpx72ccwj3b4" unique="false" columns="division_users_id"/>
+      <index name="FK_y14897gj7r3ya4iuono0eial" unique="false" columns="user_id"/>
     </table>
     <table name="message" schema="" catalog="rsconvent" type="TABLE">
       <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
@@ -42,6 +55,10 @@
       <column name="sent_by_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
       <column name="sub" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="FK_mylu2hcyctdc852m5wasoe9kx" columns="sent_by_id" ref-table="user" ref-schema="" ref-catalog="rsconvent" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="FK_6sdlgiw4g8030590ydile7033" table="user_received_messages" schema="" catalog="rsconvent" columns="message_id"/>
+      <exported-key name="FK_1h748h28a8lyvpqv6evd4fkkh" table="user_received_messages" schema="" catalog="rsconvent" columns="sent_by_id"/>
+      <index name="FK_mylu2hcyctdc852m5wasoe9kx" unique="false" columns="sent_by_id"/>
     </table>
     <table name="reset_password" schema="" catalog="rsconvent" type="TABLE">
       <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
@@ -57,20 +74,23 @@
       <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
       <column name="uploaded_by_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
       <column name="class" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="file_path" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <column name="link_url" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="file_path" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="FK_4pwh3b4yvns0f1x04j0admqvh" columns="uploaded_by_id" ref-table="user" ref-schema="" ref-catalog="rsconvent" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="FK_4pwh3b4yvns0f1x04j0admqvh" unique="false" columns="uploaded_by_id"/>
     </table>
     <table name="user" schema="" catalog="rsconvent" type="TABLE">
       <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
       <column name="version" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
       <column name="address" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
       <column name="date_created" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <column name="dob" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
       <column name="email" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
       <column name="first_name" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
       <column name="gender" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
       <column name="is_active" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="last_name" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="last_name" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <column name="last_updated" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
       <column name="password" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
       <column name="phone" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
@@ -78,10 +98,34 @@
       <column name="user_group" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
       <column name="username" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
       <column name="class" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="father_name" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <column name="guardian_id" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="mother_name" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <column name="percentage" sqlType="FLOAT" precision="12" scale="0" nullable="true" jdbcType="7"/>
+      <column name="class_teacher" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="FK_gag6iugn33bwy77kkv2bvk89o" columns="guardian_id" ref-table="user" ref-schema="" ref-catalog="rsconvent" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="FK_8mpsjmjnbx3qyg5xvdaihjpbw" table="division" schema="" catalog="rsconvent" columns="top_performer_id"/>
+      <exported-key name="FK_o2ad7pk7o7fhn0ejfou6ocwo8" table="division" schema="" catalog="rsconvent" columns="class_teacher_id"/>
+      <exported-key name="FK_2tfd83rhiy9lkapchsxw5vc41" table="division_class_teacher" schema="" catalog="rsconvent" columns="teacher_id"/>
+      <exported-key name="FK_y14897gj7r3ya4iuono0eial" table="division_user" schema="" catalog="rsconvent" columns="user_id"/>
+      <exported-key name="FK_mylu2hcyctdc852m5wasoe9kx" table="message" schema="" catalog="rsconvent" columns="sent_by_id"/>
+      <exported-key name="FK_4pwh3b4yvns0f1x04j0admqvh" table="resource" schema="" catalog="rsconvent" columns="uploaded_by_id"/>
+      <exported-key name="FK_gag6iugn33bwy77kkv2bvk89o" table="user" schema="" catalog="rsconvent" columns="guardian_id"/>
+      <exported-key name="FK_t5fkk07rkbiuklv3nf4e0qxcn" table="user_received_messages" schema="" catalog="rsconvent" columns="user_id"/>
       <index name="UK_sb8bbouer5wak8vyiiy4pf2bx" unique="true" columns="username"/>
+      <index name="FK_gag6iugn33bwy77kkv2bvk89o" unique="false" columns="guardian_id"/>
+    </table>
+    <table name="user_received_messages" schema="" catalog="rsconvent" type="TABLE">
+      <column name="user_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="sent_by_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="message_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <primary-key name="PRIMARY" columns="user_id,sent_by_id"/>
+      <foreign-key name="FK_6sdlgiw4g8030590ydile7033" columns="message_id" ref-table="message" ref-schema="" ref-catalog="rsconvent" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="FK_1h748h28a8lyvpqv6evd4fkkh" columns="sent_by_id" ref-table="message" ref-schema="" ref-catalog="rsconvent" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="FK_t5fkk07rkbiuklv3nf4e0qxcn" columns="user_id" ref-table="user" ref-schema="" ref-catalog="rsconvent" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="FK_1h748h28a8lyvpqv6evd4fkkh" unique="false" columns="sent_by_id"/>
+      <index name="FK_6sdlgiw4g8030590ydile7033" unique="false" columns="message_id"/>
     </table>
   </data-source>
 </component>
